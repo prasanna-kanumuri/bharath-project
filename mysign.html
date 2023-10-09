@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Sign In</title>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.logo img {
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+.signin-form {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.signin-form h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #e50914;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff3d27;
+}
+
+.help-text {
+    font-size: 0.9rem;
+}
+
+.help-text a {
+    color: #e50914;
+    text-decoration: none;
+}
+
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="https://tse2.mm.bing.net/th?id=OIP.nq9hixbSFJITC6XFYnT0KgHaFG&pid=Api&P=0&h=220" alt="Netflix Logo">
+        </div>
+        <form class="signin-form" action="signin.php" method="POST">
+            <h2>Sign In</h2>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Sign In</button>
+            <p class="help-text">New to Netflix? <a href="signup.html">Sign up now</a>.</p>
+        </form>
+    </div>
+</body>
+</html>

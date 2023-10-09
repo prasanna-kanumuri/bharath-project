@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Clone</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #111;
+            color: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .navbar {
+            background-color: #000;
+            padding: 20px 0;
+        }
+
+        .logo {
+            width: 100px;
+        }
+
+        .nav-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-links li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .nav-links li:last-child {
+            margin-right: 0;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .main-content {
+            padding: 80px 0;
+        }
+
+        .hero {
+            background-image: url('hero-background.jpg');
+            background-size: cover;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            background-color: #e50914;
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #ff3d27;
+        }
+
+        .featured h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .movie-card-container {
+            display: flex;
+            overflow-x: auto; /* Allow horizontal scrolling */
+            padding: 10px; /* Add some space around the container */
+        }
+
+        .movie-card {
+            flex: 0 0 auto; /* Ensure cards don't shrink */
+            margin: 10px;
+        }
+
+        .movie-card img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer {
+            background-color: #000;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .footer p {
+            margin: 0;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <img src="https://tse2.mm.bing.net/th?id=OIP.nq9hixbSFJITC6XFYnT0KgHaFG&pid=Api&P=0&h=220" alt="Netflix Logo" class="logo">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">TV Shows</a></li>
+                    <li><a href="#">Movies</a></li>
+                    <li><a href="#">My List</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="hero">
+            <div class="container">
+                <h1>Welcome to Netflix</h1>
+                <p>Unlimited movies, TV shows, and more.</p>
+                <button class="cta-button"><a href="mysign.html">Sign Up</a></button>
+            </div>
+        </section>
+
+        <section class="featured">
+            <div class="container">
+                <h2>Featured Titles</h2>
+                <!-- Add featured movie and TV show cards here -->
+                <div class="movie-card-container">
+                    <div class="movie-card">
+                        <img src="https://tse4.mm.bing.net/th?id=OIP.hWosef5YJc7-bLmJDiuulwHaEK&pid=Api&P=0&h=220" alt="Movie 1">
+                    </div>
+                    <div class="movie-card">
+                        <img src="https://tse3.mm.bing.net/th?id=OIP.f8_4WHovsBqEk48RBvFxOwHaEK&pid=Api&P=0&h=220" alt="Movie 2">
+                    </div>
+                    <div class="movie-card">
+                        <img src="https://tse2.mm.bing.net/th?id=OIP.sKeE7RHle-jRc8UEgb-BuAHaEK&pid=Api&P=0&h=220" alt="Movie 1">
+                    </div>
+                    <div class="movie-card">
+                        <img src="https://tse3.mm.bing.net/th?id=OIP.NOrzixGb0agqRAIKhVJorAHaDt&pid=Api&P=0&h=220" alt="Movie 1">
+                    </div>
+                    <div class="movie-card">
+                        <img src="https://tse2.mm.bing.net/th?id=OIP.0SJ2b85MiBtti5b6ZfaQ1AHaDt&pid=Api&P=0&h=220" alt="Movie 5">
+                    </div>
+                    <div class="movie-card">
+                        <img src="https://tse2.mm.bing.net/th?id=OIP.0SJ2b85MiBtti5b6ZfaQ1AHaDt&pid=Api&P=0&h=220" alt="movie 6">
+                    </div>
+                    <div class="movie-card">
+                        <img src="https://tse4.mm.bing.net/th?id=OIP.hWosef5YJc7-bLmJDiuulwHaEK&pid=Api&P=0&h=220" alt="Movie 1">
+                    </div>
+                    <div class="movie-card">
+                        <img src="https://tse4.mm.bing.net/th?id=OIP.hWosef5YJc7-bLmJDiuulwHaEK&pid=Api&P=0&h=220" alt="Movie 1">
+                    </div>
+                    <!-- Add more movie and TV show cards -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 Netflix Clone</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
