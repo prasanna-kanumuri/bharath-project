@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Temperature Converter</title>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(Images/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+input[type=number] {
+    width: 150px;
+    height: 30px;
+    background: #fff;
+    color: #000;
+    font-size: 1.5em;
+    text-align: center;
+    border: 1px solid #4d2600;
+    outline: none;
+    border-radius: 5px;
+}
+
+#temp-box {
+    position: absolute;
+    left: 40vw;
+    top: 20vh;
+    height: 500px;
+    width: 300px;
+    background: -webkit-linear-gradient(top, #757575 1%,#c9c9c9 51%, #757575 100%);
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px #222;
+}
+
+#temp-box img {
+    position: absolute;
+    height: 250px;
+    width: 150px;
+    top: 50px;
+    left: 80px;
+}
+
+#celsius {
+    position: relative;
+    width: 150px;
+    height: 40px;
+    left: 80px;
+    top: 350px;
+}
+
+#fahrenheit {
+    position: relative;
+    width: 150px;
+    height: 40px;
+    left: 80px;
+    top: 350px;
+}
+
+#kelvin {
+    position: relative;
+    width: 150px;
+    height: 40px;
+    left: 80px;
+    top: 350px;
+}
+
+::placeholder {
+    color: #000;
+    text-align: center;
+    font: 20px;
+}
+</style>
+    </head>
+
+    <body>
+          <center><h1>Temprature Convertor</h1></center>
+        <div id="temp-box">
+            <img src="https://cdn4.iconfinder.com/data/icons/weather-182/24/weather_forcast_thermometer_thermo_meter_temperature-512.png">
+            <div id="celsius">
+                <input type="number" placeholder="Celsius...">
+            </div>
+            <div id="fahrenheit">
+                <input type="number" placeholder="Fahrenheit...">
+            </div>
+            <div id="kelvin">
+                <input type="number" placeholder="Kelvin...">
+            </div>
+        </div>
+        <script>
+            
+const celsiusInput = document.querySelector('#celsius > input');
+const fahrenheitInput = document.querySelector('#fahrenheit > input');
+const kelvinInput = document.querySelector('#kelvin > input');
+
+function roundNum(num) {
+    return Math.round(num*100)/100; 
+}
+
+function celsiusToFahrenheitAndKelvin() {
+    const cTemp = parseFloat(celsiusInput.value);
+    const fTemp = (cTemp * (9/5)) + 32;
+    const kTemp = cTemp + 273.15;
+    fahrenheitInput.value = roundNum(cTemp);
+    kelvinInput.value = roundNum(kTemp);
+}
+
+function fahrenheitToCelsiusAndKelvin() {
+    const fTemp = parseFloat(fahrenheitInput.value);
+    const cTemp = (fTemp - 32) * (5/9);
+    const kTemp = (fTemp + 459.67) * 5/9;
+    celsiusInput.value = roundNum(cTemp);
+    kelvinInput.value = roundNum(kTemp);
+}
+
+function kelvinToCelsiusAndFahrenheit() {
+    const kTemp = parseFloat(kelvinInput.value);
+    const cTemp = kTemp - 273.15;
+    const fTemp = 9/5 * (kTemp - 273) + 32;
+    celsiusInput.value = roundNum(cTemp);
+    fahrenheitInput.value = roundNum(fTemp);
+}
+
+function main(){
+    celsiusInput.addEventListener('input', celsiusToFahrenheitAndKelvin);
+    fahrenheitInput.addEventListener('input', fahrenheitToCelsiusAndKelvin);
+    kelvinInput.addEventListener('input', kelvinToCelsiusAndFahrenheit);
+}
+
+main();
+        </script>
+    </body>
+</html>
